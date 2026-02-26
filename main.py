@@ -6,8 +6,7 @@ def main():
     partita = Gioco([], 0, 0)
     continuaAGiocare = True
     print("!!!! BENVENUTO AL TRIVIA GAME !!!!\n")
-    print("Pronto a cominciare? Fa attenzione a scrivere bene le risposte\n"
-          "Ogni minimo sbaglio verrà segnalato come errore!!!\n")
+    print("Pronto a cominciare? Andiamo!!\n")
 
     while continuaAGiocare:
         domanda = partita.fornisciDomandaLivello()
