@@ -9,9 +9,10 @@ class Domanda:
         self.opzioni = opzioni
 
     def fornisciDomanda(self):
-        print(f"difficoltà {self.difficolta}\n")
-        print(self.testo)
+        print(f"Livello {self.difficolta}) {self.testo}")
         random.shuffle(self.opzioni)
-        print("scegli tra le seguenti risposte: ")
+        contatore = 1
         for o in self.opzioni:
-            print(o)
+            stringa = f"{contatore}. {o}"
+            print(stringa)
+            contatore += 1

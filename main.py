@@ -1,6 +1,6 @@
-import random
+from utente import Utente
+from game import Gioco
 
-from game import Gioco  # Assicurati che il file della classe si chiami game.py
 
 
 def main():
@@ -12,10 +12,14 @@ def main():
 
     while continuaAGiocare:
         domanda = partita.fornisciDomandaLivello()
-        print(domanda.fornisciDomanda())
+        domanda.fornisciDomanda()
         continuaAGiocare = partita.controlloRisposta(domanda, input("Fornisci qui la tua risposta: "))
 
-        print("\n")
+    nickname = input("Inserisci il tuo nickname: ")
+    punteggio = partita.punteggio
+    x = Utente(nickname, punteggio)
+    x.aggiornaPunteggio(x)
+
 
 if __name__ == '__main__':
     main()
