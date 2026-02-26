@@ -1,5 +1,3 @@
-
-
 class Utente:
 
     def __init__(self, nickname, punteggioAttuale):

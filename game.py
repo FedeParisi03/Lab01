@@ -24,20 +24,24 @@ class Gioco:
         return domandaFornita
 
     def controlloRisposta (self, domandaEstratta, rispostaData):
+
+        indiceScelto = rispostaData - 1
+        testoSelezionato = domandaEstratta.opzioni[indiceScelto]
+
         if domandaEstratta.difficolta == 4:
-            if rispostaData == domandaEstratta.risposta_esatta:
+            if testoSelezionato == domandaEstratta.risposta_esatta:
                 self.punteggio += 1
                 print ("COMPLIMENTI!!!! Hai finito il gioco con successo.")
                 return False
-            if rispostaData != domandaEstratta.risposta_esatta:
+            else:
                 print("HAI SBAGLIATO!!!! Ritenta e sarai più fortunato.")
                 return False
         else:
-            if domandaEstratta.risposta_esatta == rispostaData:
+            if testoSelezionato == domandaEstratta.risposta_esatta:
                 self.punteggio += 1
                 self.livelloAttuale += 1
                 return True
-            elif domandaEstratta.risposta_esatta != rispostaData:
+            else:
                 print("HAI SBAGLIATO!!!! Ritenta e sarai più fortunato.")
                 return False
 

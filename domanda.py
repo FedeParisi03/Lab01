@@ -8,7 +8,7 @@ class Domanda:
         self.risposta_esatta = risposta_esatta
         self.opzioni = opzioni
 
-    def fornisciDomanda(self):
+    def getDomandaRisposte(self):
         print(f"Livello {self.difficolta}) {self.testo}")
         random.shuffle(self.opzioni)
         contatore = 1

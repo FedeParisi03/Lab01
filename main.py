@@ -2,7 +2,6 @@ from utente import Utente
 from game import Gioco
 
 
-
 def main():
     partita = Gioco([], 0, 0)
     continuaAGiocare = True
@@ -12,14 +11,13 @@ def main():
 
     while continuaAGiocare:
         domanda = partita.fornisciDomandaLivello()
-        domanda.fornisciDomanda()
-        continuaAGiocare = partita.controlloRisposta(domanda, input("Fornisci qui la tua risposta: "))
+        domanda.getDomandaRisposte()
+        continuaAGiocare = partita.controlloRisposta(domanda, int(input("Fornisci qui la tua risposta: ")))
 
     nickname = input("Inserisci il tuo nickname: ")
     punteggio = partita.punteggio
     x = Utente(nickname, punteggio)
     x.aggiornaPunteggio(x)
-
 
 if __name__ == '__main__':
     main()
